@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.fizhu.learnnavigationcomponent.ui.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.fizhu.learnnavigationcomponent.ui.fragment.FirstFragment"
+        tools:layout="@layout/fragment_first"
+        android:label="FirstFragment" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.fizhu.learnnavigationcomponent.ui.fragment.SecondFragment"
+        tools:layout="@layout/fragment_second"
+        android:label="SecondFragment" />
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.fizhu.learnnavigationcomponent.ui.fragment.ThirdFragment"
+        tools:layout="@layout/fragment_third"
+        android:label="ThirdFragment" />
+
+</navigation>
