@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.fizhu.learnnavigationcomponent.R
+import com.fizhu.learnnavigationcomponent.ui.utils.getAnimSlideNavOption
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -29,9 +30,9 @@ class HomeFragment: Fragment() {
     }
 
     private fun onInit() {
-        btn_first.setOnClickListener { findNavController().navigate(R.id.firstFragment, null) }
-        btn_second.setOnClickListener { findNavController().navigate(R.id.secondFragment, null) }
-        btn_third.setOnClickListener { findNavController().navigate(R.id.thirdFragment, null) }
+        btn_first.setOnClickListener { findNavController().navigate(R.id.firstFragment, null, getAnimSlideNavOption) }
+        btn_second.setOnClickListener { findNavController().navigate(R.id.secondFragment, null, getAnimSlideNavOption) }
+        btn_third.setOnClickListener { findNavController().navigate(R.id.thirdFragment, null, getAnimSlideNavOption) }
     }
 
 }
