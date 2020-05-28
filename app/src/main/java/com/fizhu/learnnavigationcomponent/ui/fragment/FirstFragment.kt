@@ -34,6 +34,7 @@ class FirstFragment: Fragment() {
     private fun onInit() {
         toolbar_first.title = args.data
         toolbar_first.setNavigationOnClickListener { findNavController().navigateUp() }
+        btn_next1.setOnClickListener { findNavController().navigate(R.id.action_firstFragment_to_secondFragment) }
     }
 
 }

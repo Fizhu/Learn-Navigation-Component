@@ -36,8 +36,6 @@ class HomeFragment: Fragment() {
         val data = "Test Aje"
         val actionOne = HomeFragmentDirections.actionFirst(data)
         btn_first.setOnClickListener { findNavController().navigate(actionOne) }
-        btn_second.setOnClickListener { findNavController().navigate(R.id.action_second) }
-        btn_third.setOnClickListener { findNavController().navigate(R.id.action_third) }
     }
 
 }
