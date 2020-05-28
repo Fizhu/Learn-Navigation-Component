@@ -16,3 +16,12 @@ val getAnimSlideNavOption = navOptions {
         popExit = R.anim.slide_out_right
     }
 }
+
+val getAnimNavOption = navOptions {
+    anim {
+        enter = R.anim.fade_in
+        exit = R.anim.fade_out
+        popEnter = R.anim.fade_in
+        popExit = R.anim.fade_out
+    }
+}

@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.fizhu.learnnavigationcomponent.R
+import com.fizhu.learnnavigationcomponent.ui.utils.getAnimNavOption
 import com.fizhu.learnnavigationcomponent.ui.utils.getAnimSlideNavOption
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -30,9 +33,11 @@ class HomeFragment: Fragment() {
     }
 
     private fun onInit() {
-        btn_first.setOnClickListener { findNavController().navigate(R.id.firstFragment, null, getAnimSlideNavOption) }
-        btn_second.setOnClickListener { findNavController().navigate(R.id.secondFragment, null, getAnimSlideNavOption) }
-        btn_third.setOnClickListener { findNavController().navigate(R.id.thirdFragment, null, getAnimSlideNavOption) }
+        val data = "Test Aje"
+        val actionOne = HomeFragmentDirections.actionFirst(data)
+        btn_first.setOnClickListener { findNavController().navigate(actionOne) }
+        btn_second.setOnClickListener { findNavController().navigate(R.id.action_second) }
+        btn_third.setOnClickListener { findNavController().navigate(R.id.action_third) }
     }
 
 }
